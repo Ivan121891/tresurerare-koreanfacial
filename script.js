@@ -2,13 +2,13 @@
   "use strict";
 
   // ------- Configuration -------
-  const SERVICE_NAME = "Bye Bye Eye Bags";
+  const SERVICE_NAME = "Bye Bye Melasma";
   const SERVICE_DURATION_MIN = 60;
 
   // GHL credentials
   const GHL = {
     locationId: 'MuLba5LCh5hOJqGAEL19',
-    calendarId: 'rKnnR1RpMFgNKJc6K8bb',
+    calendarId: 'dSoJz6WmwlULLScLp1Wk',
     userId:     '2tQreqXcDpaAiSBqlK7T',
     apiKey:     'pit-35c68604-5e7f-449b-8d11-9c88022c966e',
     apiBase:    'https://services.leadconnectorhq.com',
@@ -285,8 +285,8 @@
         lastName: lastName || '-',
         email,
         phone,
-        source: 'Treasure Rare - Bye Bye Eye Bags',
-        tags: ['Bye Bye Eye Bags'],
+        source: 'Bye Bye Melasma LP',
+        tags: ['Bye Bye Melasma'],
       });
       const contactId = contactRes.contact?.id || contactRes.id;
 
@@ -299,7 +299,7 @@
         assignedUserId: GHL.userId,
         startTime:      isoInTz(start, BUSINESS_TZ),
         endTime:        isoInTz(end,   BUSINESS_TZ),
-        title:          `${name} — Bye Bye Eye Bags`,
+        title:          `${name} — Bye Bye Melasma`,
         selectedTimezone: BUSINESS_TZ,
       });
 
