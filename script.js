@@ -2,15 +2,15 @@
   "use strict";
 
   // ------- Configuration -------
-  const SERVICE_NAME = "Bye Bye Melasma";
+  const SERVICE_NAME = "Korean Facial";
   const SERVICE_DURATION_MIN = 60;
 
   // GHL credentials
   const GHL = {
     locationId: 'MuLba5LCh5hOJqGAEL19',
-    calendarId: 'dSoJz6WmwlULLScLp1Wk',
+    calendarId: 'A9XQfSeTMvmh7bkcbMz5',
     userId:     '2tQreqXcDpaAiSBqlK7T',
-    apiKey:     'pit-35c68604-5e7f-449b-8d11-9c88022c966e',
+    apiKey:     'pit-639678d3-a746-4469-bcea-914e1c1f5a13',
     apiBase:    'https://services.leadconnectorhq.com',
     version:    '2021-07-28',
   };
@@ -285,8 +285,8 @@
         lastName: lastName || '-',
         email,
         phone,
-        source: 'Bye Bye Melasma LP',
-        tags: ['Bye Bye Melasma'],
+        source: 'Korean Facial LP',
+        tags: ['Korean Facial'],
       });
       const contactId = contactRes.contact?.id || contactRes.id;
 
@@ -299,7 +299,7 @@
         assignedUserId: GHL.userId,
         startTime:      isoInTz(start, BUSINESS_TZ),
         endTime:        isoInTz(end,   BUSINESS_TZ),
-        title:          `${name} — Bye Bye Melasma`,
+        title:          `${name} — Korean Facial`,
         selectedTimezone: BUSINESS_TZ,
       });
 
