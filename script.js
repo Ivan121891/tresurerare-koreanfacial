@@ -224,9 +224,20 @@
 
   function track(event, params) {
     if (typeof window.fbq === "function") {
-      try { window.fbq("track", event, params || {}); } catch (_) {}
+      try { window.fbq("trackSingle", "1178133073434960", event, params || {}); } catch (_) {}
     }
   }
+  function trackDedicated(event, params, eventId) {
+    if (typeof window.fbq === "function") {
+      try {
+        var opts = eventId ? { eventID: eventId } : {};
+        window.fbq("trackSingle", "882967721047979", event, params || {}, opts);
+      } catch (_) {}
+    }
+  }
+  (function fireViewContent() {
+    trackDedicated("ViewContent", { content_name: SERVICE_NAME });
+  })();
 
   // ------- Back buttons -------
   document.querySelectorAll(".back-btn").forEach((btn) => {
@@ -305,6 +316,7 @@
 
       track("Lead", { content_name: SERVICE_NAME });
       track("Schedule", { content_name: SERVICE_NAME });
+      trackDedicated("Schedule", { content_name: SERVICE_NAME });
 
       renderConfirmation({
         service: SERVICE_NAME,
